@@ -2,6 +2,7 @@
 - name: Setup WebServer
   hosts: 172.31.88.244
   become: yes
+  tags: webserver
   tasks:
     - name: Install Apache httpd 
       yum:
