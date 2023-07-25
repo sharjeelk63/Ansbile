@@ -1,6 +1,6 @@
 ---
 - name: Setup WebServer
-  hosts: websrvgrp
+  hosts: 172.31.88.244
   become: yes
   tasks:
     - name: Install Apache httpd 
