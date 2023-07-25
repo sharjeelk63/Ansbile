@@ -1,17 +1,21 @@
 ---
 - name: Setup DBserver
-  hosts: dbsrvgrp
+  hosts: 172.31.94.105
   become: yes
   tasks:
     - name: Install MySQL server
       yum:
          name: mariadb-server
          state: present
+      tags:
+      - mariadb
          
     - name: Install Python MySQL 
       yum:
          name: MySQL-python
          state: present
+      tags:
+      - python
 
     - name: Start & Enable maridb service
       service:
