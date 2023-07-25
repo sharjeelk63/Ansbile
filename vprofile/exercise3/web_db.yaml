@@ -9,7 +9,7 @@
          state: present
       register: output
       tags: 
-       - httpd
+      - httpd
     - name: Start & Enable HTTPD
       service:
         name: httpd
@@ -20,4 +20,4 @@
       debug:
         var: output
       tags: 
-       - output
+      - output
